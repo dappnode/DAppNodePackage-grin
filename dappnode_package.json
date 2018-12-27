@@ -2,12 +2,12 @@
   "name": "grin.dnp.dappnode.eth",
   "version": "0.0.1",
   "description": "The grin server daemon (Floonet)",
-  "avatar": "/ipfs/",
+  "avatar": "/ipfs/QmUrJLFYxs4eaMF3MA6tsMRw5xvFak6zzQptHWmoKeyDCk",
   "type": "service",
   "image": {
     "path": "grin.dnp.dappnode.eth_0.0.1.tar.xz",
-    "hash": "/ipfs/",
-    "size": "8480888",
+    "hash": "/ipfs/Qmb5a583AibnXA2NhZ9ZUxAkLAPzpaf93B9no6yhpEF9d8",
+    "size": "47953692",
     "ports": [
       "13414:13414"
     ],
