@@ -1,0 +1,5 @@
+version: '3.4'
+services:
+    grin.dnp.dappnode.eth:
+        build: ./build
+        image: grin.dnp.dappnode.eth:0.0.1

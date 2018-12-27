@@ -1,0 +1,35 @@
+{
+  "name": "grin.dnp.dappnode.eth",
+  "version": "0.0.1",
+  "description": "The grin server daemon (Floonet)",
+  "avatar": "/ipfs/",
+  "type": "service",
+  "image": {
+    "path": "grin.dnp.dappnode.eth_0.0.1.tar.xz",
+    "hash": "/ipfs/",
+    "size": "8480888",
+    "ports": [
+      "13414:13414"
+    ],
+    "volumes": [
+      "grin_data:/root/.grin"
+    ]
+  },
+  "author": "Abel Boldú (@vdo)",
+  "keywords": [
+    "grin",
+    "mimblewimble"
+  ],
+  "homepage": {
+    "homepage": "https://grin-tech.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "license": "GPL-3.0",
+  "dependencies": {}
+}
