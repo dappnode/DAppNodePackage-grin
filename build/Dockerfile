@@ -1,7 +1,4 @@
-# Multistage docker build, requires docker 17.05
-
-# builder stage
-FROM rust:1.31 as builder
+FROM rust:1.35 as builder
 
 RUN set -ex && \
     apt-get update && \
@@ -16,13 +13,10 @@ RUN set -ex && \
 
 WORKDIR /usr/src/grin
 
-# Copying Grin
 COPY grin .
 
-# Building Grin
 RUN cargo build --release
 
-# runtime stage
 FROM debian:9.4
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y locales openssl
@@ -36,10 +30,15 @@ ENV LANG en_US.UTF-8
 COPY --from=builder /usr/src/grin/target/release/grin /usr/local/bin/grin
 
 WORKDIR /root/.grin
+
 RUN grin server config && \
     sed -i -e 's/run_tui = true/run_tui = false/' grin-server.toml && \
     sed -i -e 's/stdout_log_level = \"Warning\"/stdout_log_level = \"Info\"/' grin-server.toml 
 
-EXPOSE 13413 13414 13415 13416
+VOLUME ["/root/.grin"]
 
-ENTRYPOINT ["grin", "server", "run"]
+EXPOSE 3413 3414 3415 3416
+
+ENTRYPOINT ["grin"]
+
+CMD ["server", "run"]

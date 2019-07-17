@@ -1,7 +1,9 @@
 {
   "name": "grin.dnp.dappnode.eth",
   "version": "0.0.1",
-  "description": "The grin server daemon (Floonet)",
+  "shortDescription": "The private and lightweight mimblewimble blockchain.",
+  "description": "DAppNode Package for the grin server daemon",
+  "upstreamVersion": "v2.0.0",
   "avatar": "/ipfs/QmUrJLFYxs4eaMF3MA6tsMRw5xvFak6zzQptHWmoKeyDCk",
   "type": "service",
   "image": {
@@ -9,26 +11,34 @@
     "hash": "/ipfs/Qmb5a583AibnXA2NhZ9ZUxAkLAPzpaf93B9no6yhpEF9d8",
     "size": "47953692",
     "ports": [
-      "13414:13414"
+      "3414:3414"
     ],
     "volumes": [
       "grin_data:/root/.grin"
-    ]
+    ],
+    "restart": "always"
   },
-  "author": "Abel Boldú (@vdo)",
+  "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
+  "contributors": [
+    "Abel Boldú (@vdo)"
+  ],
+  "categories": [
+    "Blockchain"
+  ],
   "keywords": [
     "grin",
     "mimblewimble"
   ],
-  "homepage": {
+  "links": {
+    "api": "http://grin.dappnode:3413",
     "homepage": "https://grin-tech.org"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/dappnode/DAppNodePackage-grin.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/dappnode/DAppNodePackage-grin/issues"
   },
   "license": "GPL-3.0",
   "dependencies": {}
