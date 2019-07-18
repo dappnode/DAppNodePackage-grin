@@ -33,7 +33,9 @@ WORKDIR /root/.grin
 
 RUN grin server config && \
     sed -i -e 's/run_tui = true/run_tui = false/' grin-server.toml && \
-    sed -i -e 's/stdout_log_level = \"Warning\"/stdout_log_level = \"Info\"/' grin-server.toml 
+    sed -i -e 's/stdout_log_level = \"Warning\"/stdout_log_level = \"Info\"/' grin-server.toml && \
+    sed -i -e 's/log_to_file = true/log_to_file = false/' grin-server.toml && \
+    sed -i -e 's/api_http_addr = \"127.0.0.1:3413\"/api_http_addr = \"0.0.0.0:3413\"/' grin-server.toml
 
 VOLUME ["/root/.grin"]
 

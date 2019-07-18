@@ -8,8 +8,8 @@
   "type": "service",
   "image": {
     "path": "grin.dnp.dappnode.eth_0.0.1.tar.xz",
-    "hash": "/ipfs/Qmb5a583AibnXA2NhZ9ZUxAkLAPzpaf93B9no6yhpEF9d8",
-    "size": "47953692",
+    "hash": "/ipfs/QmPpRXRySe8BfGaRNPQbhX4ocdUrEu1iMZpTK43vdYn4ky",
+    "size": 46701951,
     "ports": [
       "3414:3414"
     ],
