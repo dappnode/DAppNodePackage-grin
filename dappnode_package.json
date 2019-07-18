@@ -4,7 +4,7 @@
   "shortDescription": "The private and lightweight mimblewimble blockchain.",
   "description": "DAppNode Package for the grin server daemon",
   "upstreamVersion": "v2.0.0",
-  "avatar": "/ipfs/QmUrJLFYxs4eaMF3MA6tsMRw5xvFak6zzQptHWmoKeyDCk",
+  "avatar": "/ipfs/Qma12btNTAdE8Mv7EBAAPG8fDqrYFvsHNonXdL5a7eZ6rD",
   "type": "service",
   "image": {
     "path": "grin.dnp.dappnode.eth_0.0.1.tar.xz",
